@@ -1,0 +1,40 @@
+{
+    "name": "syeedalireza/symfony-eventsourcing-toolkit",
+    "description": "Enterprise-grade Event Sourcing and CQRS implementation for Symfony. Build scalable, auditable applications with complete event history, temporal queries, and event replay capabilities.",
+    "type": "symfony-bundle",
+    "keywords": [
+        "symfony",
+        "event-sourcing",
+        "cqrs",
+        "event-store",
+        "ddd",
+        "domain-driven-design",
+        "projections",
+        "snapshots",
+        "event-replay",
+        "temporal-queries"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alireza Aminzadeh",
+            "email": "alireza.aminzadeh@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "symfony/framework-bundle": "^7.0",
+        "symfony/messenger": "^7.0",
+        "doctrine/dbal": "^4.0",
+        "ramsey/uuid": "^4.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Syeedalireza\\EventSourcingToolkit\\": "src/"
+        }
+    }
+}
