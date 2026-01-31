@@ -1,0 +1,34 @@
+deptrac:
+  paths:
+    - ./src
+  layers:
+    - name: EventStore
+      collectors:
+        - type: directory
+          value: src/EventStore/.*
+    - name: Aggregate
+      collectors:
+        - type: directory
+          value: src/Aggregate/.*
+    - name: CQRS
+      collectors:
+        - type: directory
+          value: src/CQRS/.*
+    - name: Projection
+      collectors:
+        - type: directory
+          value: src/Projection/.*
+    - name: Snapshot
+      collectors:
+        - type: directory
+          value: src/Snapshot/.*
+  ruleset:
+    EventStore: ~
+    Aggregate:
+      - EventStore
+    CQRS:
+      - Aggregate
+    Projection:
+      - EventStore
+    Snapshot:
+      - Aggregate
