@@ -2,4 +2,13 @@
 composer.lock
 /.phpunit.cache
 /coverage/
+.phpunit.result.cache
+infection.log
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
 .env
+.env.local
+/var/
+/cache/
